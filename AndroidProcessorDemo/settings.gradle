@@ -1,0 +1,1 @@
+include ':app', ':bindknife_annotation', ':bindknife_anno_proccessor', ':bindknife'

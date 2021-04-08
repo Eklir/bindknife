@@ -111,6 +111,7 @@ public class BindProccessor extends AbstractProcessor {
                 MethodSpec injectMethodSpec = injectMethodBuilder.build();
                 //定义类文件
                 TypeSpec helper = TypeSpec.classBuilder(parent.getSimpleName() + BindKnifeConstants.BIND_SUFFIX)
+                        .addModifiers(Modifier.PUBLIC)
                         .addSuperinterface(ClassName.get("com.github.eklir.android.bindknife", "IKnife"))
                         .addMethod(injectMethodSpec)
                         .build();
